@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-12. 프로토 객체 생성 및 출력</title>
+    
+    <script type="text/javascript">
+    
+        var foo = {
+            name : 'foo',
+            age : 32
+        };
+        
+        console.log(foo.toString()); // foo 객체에는 toString() 메소드가 없지만 실행될 수 있는 이유는 foo 객체의 프로토타입에 toString() 메소드가 이미 정의되어 있고, foo 객체가 상속처럼 toString() 메소드를 호출했기 때문.
+        
+        console.dir(foo);
+    
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

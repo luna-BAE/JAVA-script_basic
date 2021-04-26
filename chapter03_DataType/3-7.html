@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-7. 객체의 프로퍼티 접근</title>
+    
+    <script type="text/javascript">
+    
+        var foo = {
+            name : 'foo',
+            major : 'computer'
+        };
+        
+        console.log('객체 프로퍼티 읽기');
+        console.log(foo.name);
+        console.log(foo['name']);
+        console.log(foo.nickname); // 없는 프로퍼티이므로 언디파인드
+        
+        // console.log(foo.major);
+        
+        console.log('객체 프로퍼티 갱신');
+        foo.major = 'youth';
+        console.log(foo.major);
+        console.log(foo['major']);
+        
+        console.log('객체 프로퍼티 동적 생성'); // 존재하지 않는 프로퍼티를 호출하는 것은 언디파인드지만 존재하지 않는 프로퍼티에 값을 대입하여 생성하는 것은 동적 생성
+        foo.age = 30;
+        console.log(foo.age);
+        
+        console.log('대괄호 표기법만을 사용해야 할 경우'); // 접근하려는 프로퍼티가 표현식이거나 예약어일 경우
+        foo['full-name'] = 'foo bar';
+        console.log(foo['full-name']);
+        console.log(foo.full-name); // 여기서 full과 name은 존재하지 않는 프로퍼티로 언디파인드가 된다. 언디파인드 빼기(-) 언디파인드를 했으므로 NaN가 출력
+        console.log(foo.full);
+        console.log(name);
+        
+    
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
